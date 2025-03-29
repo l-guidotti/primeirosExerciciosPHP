@@ -1,15 +1,23 @@
 <?php 
+    date_default_timezone_set("America/Sao_Paulo");
     $nome = $_POST['nome'];
     $livro = $_POST['livro'];
     $usuario = $_POST['usuario'];
-    $dataDevolucao = 12;
+    $dataDevolucao = new DateTime();
+    $dataAtual = new DateTime();
 
-    if ($usuario === prof){
-        $devolucao = 14;
+    if ($usuario === "prof"){
+        $dataDevolucao->modify('+14 days');
+
+        echo "O " . $usuario . " " . $nome . " pegou o livro " . $livro . " " . "<br>";
+        echo "Data de entrega: " . $dataDevolucao->format("d/m/Y") . "<br>";
+        echo "Data atual: " . $dataAtual->format("d/m/Y");
     } else {
-        $devolucao = 7;
-    }
+        $dataDevolucao->modify('+7 days');
 
-    echo $nome . " " . $livro . " "  ;
-    
+        
+        echo "O " . $usuario . " " . $nome . " pegou o livro " . $livro . " " . "<br>";
+        echo "Data de entrega: " . $dataDevolucao->format("d/m/Y") . "<br>";
+        echo "Data atual: " . $dataAtual->format("d/m/Y");
+    }
 ?>

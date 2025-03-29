@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicios PHP</title>
+</head>
+<body>
+    <form action="exercicio7.php" method="post" onsubmit="return validacao()">
+        <label for="nome">Informe seu nome
+            <input type="text" name="nome" id="nome" placeholder="Digite o seu nome">
+        </label>
+        <br>
+        <label for="email">Informe seu email
+            <input type="email" name="email" id="email" placeholder="Digite seu email">
+        </label>
+        <br>
+        <label for="cpf">Digite seu CPF:
+            <input type="text" name="cpf" id="cpf" placeholder="123.456.789-00" required 
+                   pattern="^\d{3}\.\d{3}\.\d{3}-\d{2}$"
+                   title="Digite no formato 123.456.789-00">
+        </label>
+        <br>
+        <label for="cartao" >Qual a bandeira do seu Cartão de crédito:
+            <input type="radio" name="cartao" id="cartao1" value="visa">Visa
+            <input type="radio" name="cartao" id="cartao2" value="master">Master Card
+        </label>
+        <br><br>
+        <input type="submit" value="Enviar">
+    </form>
+
+    <script src="exercicio7.js"></script>
+</body>
+</html>
