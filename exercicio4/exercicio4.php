@@ -11,5 +11,5 @@
         $soma += $i;
     }
 
-    echo $soma;
+    echo "A soma dos números anteriores a " . $number . " é: " . $soma;
 ?>

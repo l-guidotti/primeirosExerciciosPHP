@@ -1,0 +1,3 @@
+# Questão 3
+
+A biblioteca de uma universidade deseja fazer um algoritmo que leia o nome do usuário, o nome do livro que será emprestado e o tipo de usuário (campo tipo radio - codificado da seguinte forma: 1:professor 2:aluno) em um formulário HTML. Em um programa PHP imprimir um recibo conforme com as seguintes informações. O Nome do Usuário, o Nome do Livro, a Data Atual e a Data de Devolução. Considerar que o professor tem 14 dias para devolver o livro e o aluno 7 dias. 
